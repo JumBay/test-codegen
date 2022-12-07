@@ -1,9 +1,9 @@
-emitLegacyCommonJSImports: true
 schema: https://countries.trevorblades.com/
 documents:
   - ./src/**/*.graphql
 extensions:
   codegen:
+    emitLegacyCommonJSImports: false
     generates:
       ./src/generated/types.ts:
         plugins:

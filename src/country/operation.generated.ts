@@ -1,4 +1,4 @@
-import * as Types from '../generated/types';
+import * as Types from '../generated/types.js';
 
 import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type GetCountryQueryVariables = Types.Exact<{
