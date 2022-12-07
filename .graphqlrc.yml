@@ -1,0 +1,19 @@
+emitLegacyCommonJSImports: true
+schema: https://countries.trevorblades.com/
+documents:
+  - ./src/**/*.graphql
+extensions:
+  codegen:
+    generates:
+      ./src/generated/types.ts:
+        plugins:
+          - typescript
+          - typescript-operations
+      ./src/:
+        preset: near-operation-file
+        presetConfig:
+          extension: .generated.ts
+          baseTypesPath: generated/types.ts
+        plugins:
+          - typescript-operations
+          - typed-document-node
